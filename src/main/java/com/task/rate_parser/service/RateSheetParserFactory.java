@@ -8,9 +8,7 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
-// The RateSheetParserFactory Class decides which parser to use based on the file extension (csv, json, xml)
+// The RateSheetParserFactory Class decides which parser to use based on the file extension (csv, json, xml ,excel)
 
 
 @Service
@@ -20,10 +18,11 @@ public class RateSheetParserFactory {
     private static final Logger logger = LoggerFactory.getLogger(RateSheetParserFactory.class);
     private final Map<String, RateSheetParser> parserMap = new HashMap<>();
 
-    public RateSheetParserFactory(CsvRateSheetParser csvParser, XmlRateSheetParser xmlParser, JsonRateSheetParser jsonParser) {
+    public RateSheetParserFactory(CsvRateSheetParser csvParser, XmlRateSheetParser xmlParser, JsonRateSheetParser jsonParser , ExcelRateSheetParser excelParser) {
         parserMap.put("csv", csvParser);
         parserMap.put("xml", xmlParser);
         parserMap.put("json", jsonParser);
+        parserMap.put("xlsx", excelParser);
     }
 
     public RateSheetParser getParser(File file) {
