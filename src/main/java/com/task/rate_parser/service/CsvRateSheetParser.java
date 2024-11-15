@@ -85,10 +85,14 @@ public class CsvRateSheetParser implements RateSheetParser {
         return columnMap;
     }
 
+
+
     // Normalize column name: trim spaces, convert to lowercase, replace spaces with underscores
     private String normalizeColumnName(String columnName) {
         return columnName.trim().toLowerCase().replace(" ", "_");
     }
+
+
 
     // Retrieve the value from the first valid column found in the given list of column names
     private String getValueFromColumn(String[] line, Map<String, Integer> columnMap, List<String> possibleColumns) {
@@ -130,20 +134,3 @@ public class CsvRateSheetParser implements RateSheetParser {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

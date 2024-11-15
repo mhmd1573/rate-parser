@@ -47,29 +47,21 @@ public class RateRecord {
         this.effectiveDate = effectiveDate;
     }
 
-
-
     public void setCarrier(String carrier) {
         this.carrier = carrier;
     }
-
-
 
     public void setRateType(String rateType) {
         this.rateType = rateType;
     }
 
-
-
     public void setMcc(String mcc) {
         Mcc = mcc;
     }
 
-
     public void setMnc(String mnc) {
         Mnc = mnc;
     }
-
 
     public void setOperator(String operator) {
         this.operator = operator;
